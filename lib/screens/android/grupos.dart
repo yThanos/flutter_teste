@@ -16,15 +16,16 @@ class _gruposState extends State<grupos> {
     double screenHeight = MediaQuery.of(context).size.height;
     return Container(
       width: screenWidth,
-      height: screenHeight,
+      height: screenHeight * 0.8,
       child: Padding(
-        padding: EdgeInsets.all(100),
+        padding: EdgeInsets.all(30),
         child: Container(
-            decoration: bordaRendonda(),
-            child: Padding(
-              padding: EdgeInsets.all(40),
-              child: Text("Grupos"),
-            )
+          width: screenWidth * 0.8,
+          decoration: bordaRendonda(),
+          child: Padding(
+            padding: EdgeInsets.all(40),
+            child: Text("Grupos"),
+          )
         ),
       ),
     );
