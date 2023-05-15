@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/android/despesas.dart';
-import 'package:flutter_app/screens/android/grupos.dart';
 
 import '../../widgets/bordaredonda.dart';
 
@@ -73,9 +72,7 @@ class _inicioState extends State<inicio> {
                               height: 40,
                               width: 100,
                               child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>despesas()));
-                                },
+                                onPressed: () {},
                                 child: Text('Despesas'),
                               ),
                             ),
@@ -153,9 +150,7 @@ class _inicioState extends State<inicio> {
                               height: 40,
                               width: 100,
                               child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>grupos()));
-                                },
+                                onPressed: () {},
                                 child: Text('Grupos'),
                               ),
                             ),
