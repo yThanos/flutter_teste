@@ -27,6 +27,8 @@ class loginful extends StatefulWidget {
 }
 
 class _loginfulState extends State<loginful> {
+  String? opcao;
+  bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -92,11 +94,21 @@ class _loginfulState extends State<loginful> {
 
                 },
                 decoration: InputDecoration(
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _obscureText ? Icons.visibility : Icons.visibility_off,
+                      ),
+                      onPressed: (){
+                        setState(() {
+                          _obscureText = !_obscureText;
+                        });
+                      },
+                    ),
                     hintText: 'senha',
                     hintStyle: TextStyle(
-                      color: Colors.grey[600], // sets the color of the label text
-                      fontSize: 16.0, // sets the font size of the label text
-                      fontWeight: FontWeight.bold, // sets the font weight of the label text
+                      color: Colors.grey[600],
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
                     ),
                     filled: true,
                     fillColor: Colors.grey[200],
@@ -105,9 +117,32 @@ class _loginfulState extends State<loginful> {
                         borderSide: BorderSide(width: 1,color: Colors.black)
                     )
                 ),
-                obscureText: true,
+                obscureText: _obscureText,
               ),
             ),
+            // DropdownButton<String>(
+            //   value: opcao,
+            //     items: [
+            //       DropdownMenuItem(
+            //         value: "1",
+            //           child: Text("teste1")
+            //       ),
+            //       DropdownMenuItem(
+            //           value: "2",
+            //           child: Text("teste1")
+            //       ),
+            //       DropdownMenuItem(
+            //           value: "3",
+            //           child: Text("teste1")
+            //       )
+            //     ],
+            //     onChanged: (newValue){
+            //       setState(() {
+            //         debugPrint(newValue);
+            //         opcao = newValue;
+            //       });
+            //     }
+            // ),
             ElevatedButton(
               onPressed: (){
                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>home()));
