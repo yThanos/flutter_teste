@@ -20,7 +20,7 @@ class _inicioState extends State<inicio> {
         child: Padding(
           padding: EdgeInsets.fromLTRB(20, 30, 20, 100),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(

@@ -47,6 +47,7 @@ class _homeState extends State<home> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topRight,
